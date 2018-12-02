@@ -135,6 +135,7 @@ public class MainScreen extends javax.swing.JFrame implements WritableGUI{
     }// </editor-fold>//GEN-END:initComponents
 
     MessageListner listener;
+    //event will be called when pressed send button
     private void ListenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListenActionPerformed
         listener=new MessageListner(this,Integer.parseInt(recieveport.getText()));
         listener.start();
@@ -149,25 +150,25 @@ public class MainScreen extends javax.swing.JFrame implements WritableGUI{
     private void sendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendActionPerformed
         send();
     }//GEN-LAST:event_sendActionPerformed
-
+    //event will be called when press key enter in message textfield area
     private void messageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_messageKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             send();
         }
     }//GEN-LAST:event_messageKeyPressed
-
+     //control will focus after recieveport textfield
     private void recieveportKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_recieveportKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             ipTextField.requestFocus();
         }
     }//GEN-LAST:event_recieveportKeyPressed
-
+     //control will focus after ip textfield
     private void ipTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ipTextFieldKeyPressed
          if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             targetport.requestFocus();
         }
     }//GEN-LAST:event_ipTextFieldKeyPressed
-
+    //control will focus after targetport textfield
     private void targetportKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_targetportKeyPressed
          if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             message.requestFocus();
