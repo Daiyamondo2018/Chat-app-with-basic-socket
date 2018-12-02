@@ -9,6 +9,7 @@ package mychatapp.networking;
  *
  * @author DAIYAMONDO_NTHN
  */
+//create an abstract method in an interface to write text message
 public interface WritableGUI {
     void write(String s);
 }
