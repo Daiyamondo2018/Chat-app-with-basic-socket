@@ -38,7 +38,7 @@ public class MessageListner extends  Thread{
             Logger.getLogger(MessageListner.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // connect and send message client
     @Override
     public void run() {
         Socket clientsocket;
