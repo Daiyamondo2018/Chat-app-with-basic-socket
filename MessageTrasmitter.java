@@ -25,7 +25,7 @@ public class MessageTrasmitter extends Thread{
         this.hostname=hostname;
         this.port=port;
     }
-
+    //receve and show message
     @Override
     public void run() {
         try {
